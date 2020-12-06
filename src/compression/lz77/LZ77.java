@@ -135,7 +135,7 @@ public class LZ77 {
 		int windowSize = 30;
 
 		if (args.length < 1) {
-			System.out.println("Kich thuoc cua so hien tai :" + windowSize+"Kich thuoc cang lon thoi gian cang lau");
+			System.out.println("Kich thuoc cua so hien tai :" + windowSize+". Kich thuoc cang lon thoi gian cang lau");
 			System.out.println("File nen duoc luu duoi dang inputfilename-compressed.extension");
 			System.out.println("File giai nen duoc luu duoi dang inputfilename-decompressed.extension");
 			return;
