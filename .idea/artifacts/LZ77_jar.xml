@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="LZ77:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LZ77_jar</output-path>
+    <root id="archive" name="LZ77.jar">
+      <element id="module-output" name="LZ77" />
+    </root>
+  </artifact>
+</component>

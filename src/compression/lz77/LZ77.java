@@ -9,9 +9,11 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.Collections;
 
 import compression.lz77.streams.BitInputStream;
 import compression.lz77.streams.BitOutputStream;
@@ -66,7 +68,7 @@ public class LZ77 {
 			outputChannel = outputFileStream.getChannel();
 			ByteBuffer buffer = ByteBuffer.allocate(1);
 			try {
-				while (true) {// when end of file reached, inputStream throws End Of file Exception
+				while (true) {
 					int flag = inputFileStream.read();
 					if (flag == 0) {
 						buffer.clear();
@@ -132,7 +134,7 @@ public class LZ77 {
 
 	public static void main(String[] args) throws IOException {
 
-		int windowSize = 30;
+		int windowSize = 100;
 
 		if (args.length < 1) {
 			System.out.println("Kich thuoc cua so hien tai :" + windowSize+". Kich thuoc cang lon thoi gian cang lau");
